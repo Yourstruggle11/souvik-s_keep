@@ -1,0 +1,182 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+main .header{
+    width: 100%;
+    height: 100px;
+    background: rgb(243, 142, 69);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+main .header .note_box{
+    width: 200px;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main .header .head_title{
+    position: relative;
+    margin: auto;
+    left: -7%;
+    color: #05fdf1;
+    text-shadow: 4px 4px 15px;
+}
+main .header .note_box #note_title{
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    margin: 20px 0px;
+    text-align: center;
+
+}
+main .header .note_box #note_title:focus{
+    box-shadow: 4px 4px 5px 3px rgb(0,0,0,0.5),
+    -4px -4px 5px 3px rgb(0,0,0,0.5);
+}
+
+main .header .note_box input[type=button]{
+    width: 120px;
+    height: 30px;
+    border-radius: 50px;
+    outline: none;
+    border: 2px solid dodgerblue;
+    background: white;
+    padding: 5px;
+    transition: all 0.5s;
+}
+main .header .note_box input[type=button]:hover{
+    background: dodgerblue;
+    color: white;
+}
+main .note_list{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+main .note_list .note_card{
+    width: 200px;
+    height: 200px;
+    background: rgb(243, 203, 102);
+    margin-top: 50px;
+    margin-left: 20px;
+    border-radius: 15px;
+}
+main .note_list .note_card .head{
+    display: flex;
+    justify-content: space-around;
+
+}
+main .note_list .note_card .head .edit{
+    width: 40px;
+    height: 40px;
+    background: rgb(58, 173, 58);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.5s;
+}
+main .note_list .note_card .head .edit:hover{
+    background: white;
+    color: rgb(58, 173, 58);
+    filter: drop-shadow(4px 4px 5px rgba(0,0,0,0.5));
+}
+main .note_list .note_card .head .delete{
+    width: 40px;
+    height: 40px;
+    background: rgb(231, 62, 62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.5s;
+}
+main .note_list .note_card .head .delete:hover{
+    background: white;
+    color: rgb(231, 62, 62);
+    filter: drop-shadow(4px 4px 5px rgba(0,0,0,0.5));
+}
+main .note_list .note_card .head .fa-edit{
+    font-size: 25px;
+    
+}
+main .note_list .note_card .head .fa-trash-o{
+    font-size: 25px;
+    
+ }
+main .note_list .note_card .note_details{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 10px;
+    border-radius: 15px;
+    overflow: scroll;
+}
+main .note_list .note_card .note_details .work{
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    outline: none;
+    border: none;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 20px;
+    background:rgb(243, 203, 102);
+    overflow-y: scroll;
+    border-radius: 15px;
+}
+main .note_list .note_card .note_details #note{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    text-align: center;
+    resize: none;
+    padding: 5px;
+    border: 2px solid rgb(243, 203, 102);
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+/* ---------------for responsive---------------- */
+
+@media(max-width:600px){
+    main .header{
+
+    }
+    main .header .note_box{
+        position: relative;
+        width: 100%;
+        top: 70px;
+        display: flex;
+        justify-content: center;
+    }
+    main .header .head_title{
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+}
